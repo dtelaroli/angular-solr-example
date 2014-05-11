@@ -3,3 +3,29 @@
   Showing of 'interpolate' filter:
   {{ 'Current version is v%VERSION%.' | interpolate }}
 </p>
+
+<h3>Service JSONP</h3>
+
+<form ng-submit="search()">
+	<input type="text" ng-model="q" placeholder="Search"/><br/>
+	<button>Search</button>
+</form>
+
+<p>Total: {{$result.numFound}}</p>
+
+<table ng-if="$result.numFound > 0">
+	<tr>
+		<th>#</th>
+		<th>Name</th>
+		<th>Country</th>
+		<th>Language</th>
+		<th>Population</th>
+	</tr>
+	<tr ng-repeat="city in $result.docs">
+		<td>{{city.id}}</td>
+		<td>{{city.name}}</td>
+		<td>{{city.country}}</td>
+		<td>{{city.language}}</td>
+		<td>{{city.population | number}}</td>
+	</tr>
+</table>

@@ -1,1 +1,31 @@
 <p>This is the partial for view 1.</p>
+
+<h3>Service JSON</h3>
+
+<form ng-submit="search()">
+	<input type="text" ng-model="q" placeholder="Search"/><br/>
+	<input type="text" ng-model="country" placeholder="Country"/><br/>
+	<input type="text" ng-model="language" placeholder="Language"/><br/>
+	<input type="text" ng-model="min" placeholder="Population min"/> to 
+	<input type="text" ng-model="max" placeholder="Population max"/><br/>
+	<button>Search</button>
+</form>
+
+<p>Total: {{$result.numFound}}</p>
+
+<table ng-if="$result.numFound > 0">
+	<tr>
+		<th>#</th>
+		<th>Name</th>
+		<th>Country</th>
+		<th>Language</th>
+		<th>Population</th>
+	</tr>
+	<tr ng-repeat="city in $result.docs">
+		<td>{{city.id}}</td>
+		<td>{{city.name}}</td>
+		<td>{{city.country}}</td>
+		<td>{{city.language}}</td>
+		<td>{{city.population | number}}</td>
+	</tr>
+</table>
