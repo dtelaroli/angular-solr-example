@@ -3,7 +3,7 @@
 ### Importing Mysql Dababase Example
 
 Run file above in mysql:
-
+Original db example: http://dev.mysql.com/doc/sakila/en/sakila-usage.html
 ```
 <project>/world.sql
 ```
