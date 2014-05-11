@@ -1,3 +1,39 @@
+# Angular Solr Example
+
+### Importing Mysql Dababase Example
+
+Run file above in mysql:
+
+```
+<project>/world.sql
+```
+
+### Configuring Database Connection
+
+```
+Default User: root
+Default Password: admin123
+Default Scheme: example
+
+$ vim <project>/solr-4.8.0/example/conf/data-config.xml
+```
+
+### Executing Solr
+
+```
+$ cd <project>/solr-4.8.0/example
+$ ./solr.sh
+```
+
+### Executing Angular With NodeJS
+```
+$ sudo apt-get install npm nodejs nodejs-legacy
+$ npm start
+```
+
+
+======================= ORIGINAL README ============================
+
 # angular-seed — the seed for AngularJS apps
 
 This project is an application skeleton for a typical [AngularJS](http://angularjs.org/) web app.

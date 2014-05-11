@@ -1,0 +1,16 @@
+<dataConfig>
+  <dataSource type="JdbcDataSource" 
+              driver="com.mysql.jdbc.Driver"
+              url="jdbc:mysql://localhost/example" 
+              user="root"
+              password="admin123" convertType="true"/>
+  <document>
+    <entity name="cities" query="select id, name, country, language, population from vw_city">
+	   	<field column="id" name="id"/>
+    	<field column="name" name="name"/>
+    	<field column="country" name="country"/>
+    	<field column="language" name="language"/>
+    	<field column="population" name="population"/>
+    </entity>
+  </document>
+</dataConfig>
